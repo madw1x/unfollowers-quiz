@@ -1,0 +1,42 @@
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Базовые стили страницы */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #fafbfd;
+}
+
+body {
+  font-family: 'Satoshi', 'Inter', 'Montserrat', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 420px;
+    margin-top: 32px;
+    border-radius: 16px;
+    box-shadow: 0 1px 18px #2221;
+  }
+}

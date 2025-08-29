@@ -1,0 +1,361 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fafbfd;
+  font-family: 'Satoshi', 'Inter', Arial, sans-serif;
+}
+
+.header {
+  padding: 40px 0 32px 0;
+}
+
+.title {
+  font-size: 1.7rem; 
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.options {
+  flex: 1;
+  margin-bottom: 32px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.mainCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mainIcon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.mainStats {
+  text-align: center;
+}
+
+.percentageText {
+  font-size: 1.25rem; 
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.percentageText strong {
+  font-weight: 700;
+  color: #fe449c;
+}
+
+.statCard {
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  cursor: default;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.statCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.statContent {
+  display: flex;
+  align-items: center; 
+  padding: 18px 20px;
+  gap: 16px;
+  text-align: center; 
+}
+
+.statIcon {
+  width: 44px;
+  height: 44px;
+  background: #f8f9fb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statCard:nth-child(2) .statIcon {
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+}
+
+.statCard:nth-child(3) .statIcon {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+}
+
+.statTitle {
+  flex: 1;
+  font-size: 1.15rem; 
+  font-weight: 500;
+  color: #2d2d2d;
+  line-height: 1.35;
+  text-align: center; 
+}
+
+.statTitle strong {
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+.ctaEnabled {
+  width: 100%;
+  border: none;
+  border-radius: 28px;
+  padding: 18px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  background: linear-gradient(90deg, #ff8456 0%, #fe449c 100%);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(254, 68, 156, 0.25);
+  margin-bottom: 20px;
+}
+
+.ctaEnabled:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(254, 68, 156, 0.3);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .header {
+    padding: 20px 0 24px 0;
+  }
+  
+  .title {
+    font-size: 1.5rem; 
+  }
+  
+  .mainCard {
+    padding: 20px;
+  }
+  
+  .mainIcon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
+  }
+  
+  .percentageText {
+    font-size: 1.15rem; 
+  }
+  
+  .statContent {
+    padding: 16px 18px;
+    gap: 14px;
+  }
+  
+  .statIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .statTitle {
+    font-size: 1.05rem; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 600px;
+    padding: 32px;
+  }
+
+  .header {
+    padding: 50px 0 40px 0;
+  }
+
+  .title {
+    font-size: 2.1rem;
+    margin-bottom: 16px;
+  }
+
+  .mainCard {
+    padding: 32px;
+    margin-bottom: 16px;
+  }
+
+  .mainIcon {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 20px;
+  }
+
+  .percentageText {
+    font-size: 1.4rem;
+  }
+
+  .statContent {
+    padding: 22px 24px;
+    gap: 20px;
+  }
+
+  .statIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .statTitle {
+    font-size: 1.25rem;
+  }
+
+  .ctaEnabled {
+    padding: 20px 0;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 800px;
+    padding: 40px;
+    height: 100vh;
+  }
+
+  .options {
+    overflow-y: hidden;
+    justify-content: center;
+  }
+
+  .header {
+    padding: 40px 0 32px 0;
+  }
+
+  .title {
+    font-size: 2.6rem;
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .mainCard {
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+
+  .mainIcon {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+  }
+
+  .percentageText {
+    font-size: 1.6rem;
+  }
+
+  .statCard {
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .statContent {
+    padding: 28px 32px;
+    gap: 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .statIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    margin: 0 auto 16px auto;
+  }
+
+  .statTitle {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .ctaEnabled {
+    padding: 22px 0;
+    font-size: 1.3rem;
+    border-radius: 32px;
+    max-width: 500px;
+    margin: 0 auto 24px auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1000px;
+    padding: 60px;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .mainCard {
+    padding: 50px;
+  }
+
+  .mainIcon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+
+  .percentageText {
+    font-size: 1.8rem;
+  }
+
+  .statContent {
+    padding: 32px 36px;
+  }
+
+  .statIcon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 20px;
+  }
+
+  .statTitle {
+    font-size: 1.5rem;
+  }
+
+  .ctaEnabled {
+    font-size: 1.4rem;
+    padding: 24px 0;
+    max-width: 600px;
+  }
+}

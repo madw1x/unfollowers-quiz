@@ -1,0 +1,614 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+}
+
+.logo {
+  height: 93px;
+  width: auto;
+}
+
+.headerIcons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.rocketIcon {
+  width: 32px;
+  height: 32px;
+  transform: rotate(-15deg);
+}
+
+.starIcon {
+  width: 28px;
+  height: 28px;
+  transform: rotate(20deg) translateY(-5px);
+}
+
+.content {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.timerWrapper {
+  display: flex;
+  align-items: center;
+  background: #2c2c2e;
+  border-radius: 24px;
+  padding: 12px 20px;
+  margin: 0 auto 20px auto;
+  max-width: 350px;
+}
+
+.timerBlock {
+  background: linear-gradient(135deg, #ff8456 0%, #fe449c 100%);
+  border-radius: 12px;
+  color: white;
+  font-weight: 900;
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.timerDesc {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.planSelection {
+  margin-bottom: 24px;
+}
+
+.planWrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.saveBadge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: #ff3b82;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 10;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(255, 59, 130, 0.5);
+}
+
+@keyframes pulse {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 59, 130, 0.5);
+  }
+  50% { 
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 59, 130, 0.8);
+  }
+  100% { 
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 59, 130, 0.5);
+  }
+}
+
+.planOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid #f0f0f0;
+  background: white;
+}
+
+.planOption.selected {
+  border: 2px solid #ff3b82;
+  background: white;
+}
+
+.planDetails {
+  flex: 1;
+}
+
+.planTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+}
+
+.planSubtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.infoCards {
+  margin-bottom: 32px;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.infoCard {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoNumber {
+  font-size: 1.3rem; 
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.infoLabel {
+  font-size: 1.3rem; 
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 6px 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.infoText {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.buttonContainer {
+  padding: 0 20px 20px 20px;
+  text-align: center;
+}
+
+.cta {
+  width: 100%;
+  border: none;
+  border-radius: 28px;
+  padding: 18px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff8456 0%, #fe449c 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 24px rgba(254, 68, 156, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(254, 68, 156, 0.3);
+}
+
+@media (max-width: 375px) {
+  .header {
+    padding: 12px 16px;
+  }
+  
+  .logo {
+    height: 75px; 
+  }
+  
+  .headerIcons {
+    gap: 30px;
+  }
+  
+  .rocketIcon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .starIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .content {
+    padding: 0 16px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .timerWrapper {
+    max-width: 100%;
+    padding: 10px 16px;
+  }
+  
+  .timerBlock {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    margin-right: 12px;
+  }
+  
+  .timerDesc {
+    font-size: 0.8rem;
+  }
+  
+  .infoRow {
+    gap: 8px;
+  }
+  
+  .infoCard {
+    padding: 12px;
+  }
+  
+  .infoNumber, .infoLabel {
+    font-size: 1.1rem;
+  }
+  
+  .buttonContainer {
+    padding: 0 16px 16px 16px;
+  }
+  
+  .cta {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .header {
+    padding: 24px 40px;
+  }
+
+  .logo {
+    height: 120px;
+  }
+
+  .headerIcons {
+    gap: 50px;
+  }
+
+  .rocketIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .starIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .content {
+    padding: 0 40px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+  }
+
+  .feature {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .timerWrapper {
+    max-width: 500px;
+    padding: 16px 24px;
+    margin-bottom: 32px;
+  }
+
+  .timerBlock {
+    font-size: 1.6rem;
+    padding: 12px 20px;
+    margin-right: 20px;
+  }
+
+  .timerDesc {
+    font-size: 1rem;
+  }
+
+  .planOption {
+    padding: 24px;
+    gap: 16px;
+    border-radius: 28px;
+  }
+
+  .planTitle {
+    font-size: 1.25rem;
+  }
+
+  .planSubtitle {
+    font-size: 1rem;
+  }
+
+  .infoCards {
+    margin-bottom: 40px;
+  }
+
+  .infoRow {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .infoCard {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .infoNumber, .infoLabel {
+    font-size: 1.4rem;
+  }
+
+  .infoText {
+    font-size: 0.9rem;
+  }
+
+  .buttonContainer {
+    padding: 0 40px 32px 40px;
+  }
+
+  .cta {
+    font-size: 1.2rem;
+    padding: 20px 0;
+    border-radius: 32px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 800px;
+    height: 100vh;
+  }
+
+  .header {
+    padding: 40px 60px;
+  }
+
+  .logo {
+    height: 140px;
+  }
+
+  .headerIcons {
+    gap: 60px;
+  }
+
+  .rocketIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .starIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .content {
+    padding: 0 60px;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+
+  .features {
+    margin-bottom: 40px;
+  }
+
+  .feature {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+
+  .timerWrapper {
+    max-width: 600px;
+    padding: 20px 32px;
+    margin-bottom: 40px;
+  }
+
+  .timerBlock {
+    font-size: 1.8rem;
+    padding: 16px 24px;
+    margin-right: 24px;
+  }
+
+  .timerDesc {
+    font-size: 1.1rem;
+  }
+
+  .planSelection {
+    margin-bottom: 40px;
+  }
+
+  .planOption {
+    padding: 32px;
+    gap: 20px;
+    border-radius: 32px;
+  }
+
+  .planTitle {
+    font-size: 1.4rem;
+  }
+
+  .planSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .saveBadge {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+  }
+
+  .infoCards {
+    margin-bottom: 50px;
+  }
+
+  .infoRow {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .infoCard {
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .infoNumber, .infoLabel {
+    font-size: 1.6rem;
+  }
+
+  .infoText {
+    font-size: 1rem;
+  }
+
+  .buttonContainer {
+    padding: 0 60px 40px 60px;
+  }
+
+  .cta {
+    font-size: 1.3rem;
+    padding: 24px 0;
+    border-radius: 36px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .header {
+    padding: 50px 80px;
+  }
+
+  .logo {
+    height: 160px;
+  }
+
+  .content {
+    padding: 0 80px;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+  }
+
+  .feature {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+
+  .timerWrapper {
+    max-width: 700px;
+    padding: 24px 40px;
+    margin-bottom: 50px;
+  }
+
+  .timerBlock {
+    font-size: 2rem;
+    padding: 20px 32px;
+    margin-right: 32px;
+  }
+
+  .timerDesc {
+    font-size: 1.2rem;
+  }
+
+  .planOption {
+    padding: 40px;
+    gap: 24px;
+  }
+
+  .planTitle {
+    font-size: 1.6rem;
+  }
+
+  .planSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .infoCard {
+    padding: 32px;
+  }
+
+  .infoNumber, .infoLabel {
+    font-size: 1.8rem;
+  }
+
+  .infoText {
+    font-size: 1.1rem;
+  }
+
+  .buttonContainer {
+    padding: 0 80px 50px 80px;
+  }
+
+  .cta {
+    font-size: 1.4rem;
+    padding: 28px 0;
+    max-width: 700px;
+  }
+}

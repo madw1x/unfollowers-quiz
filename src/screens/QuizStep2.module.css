@@ -1,0 +1,366 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fafbfd;
+  font-family: 'Satoshi', 'Inter', Arial, sans-serif;
+}
+
+.inputSection {
+  flex: 1;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagramWrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(281.84deg, #FF0090 6.12%, #FF583A 59.43%, #FFAE00 106.94%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 32px rgba(108, 71, 255, 0.25);
+}
+
+.instagramIcon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.subtitle {
+  color: #888888;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 320px;
+}
+
+.lockIcon {
+  margin-top: 2px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.atSymbol {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.1rem;
+  font-weight: 500;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 18px 20px 18px 40px;
+  border-radius: 16px;
+  border: 2px solid #e8eaed;
+  outline: none;
+  box-sizing: border-box;
+  font-weight: 500;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.input:focus {
+  border-color: #fe449c;
+  box-shadow: 0 0 0 3px rgba(254, 68, 156, 0.1);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.ctaEnabled, .ctaDisabled {
+  width: 100%;
+  border: none;
+  border-radius: 28px;
+  padding: 18px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.ctaEnabled {
+  background: linear-gradient(90deg, #ff8456 0%, #fe449c 100%);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(254, 68, 156, 0.25);
+}
+
+.ctaEnabled:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(254, 68, 156, 0.3);
+}
+
+.ctaDisabled {
+  background: #e8eaed;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #e8eaed;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 16.66%; 
+  height: 100%;
+  background: linear-gradient(90deg, #ff8456 0%, #fe449c 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .instagramWrapper {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  
+  .instagramIcon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .input {
+    font-size: 1.05rem;
+    padding: 16px 18px 16px 36px;
+  }
+  
+  .atSymbol {
+    left: 18px;
+    font-size: 1.05rem;
+  }
+  
+  .ctaEnabled, .ctaDisabled {
+    font-size: 1.05rem;
+    padding: 16px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 600px;
+    padding: 32px;
+  }
+
+  .instagramWrapper {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 32px;
+    border-radius: 22px;
+  }
+
+  .instagramIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    max-width: 450px;
+    margin-bottom: 32px;
+  }
+
+  .inputWrapper {
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+  }
+
+  .input {
+    font-size: 1.2rem;
+    padding: 20px 22px 20px 44px;
+    border-radius: 18px;
+  }
+
+  .atSymbol {
+    left: 22px;
+    font-size: 1.2rem;
+  }
+
+  .ctaEnabled, .ctaDisabled {
+    font-size: 1.2rem;
+    padding: 20px 0;
+    border-radius: 30px;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 800px;
+    padding: 40px;
+  }
+
+  .instagramWrapper {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 40px;
+    border-radius: 26px;
+  }
+
+  .instagramIcon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    max-width: 550px;
+    margin-bottom: 40px;
+  }
+
+  .inputWrapper {
+    max-width: 500px;
+    margin: 0 auto 50px auto;
+  }
+
+  .input {
+    font-size: 1.3rem;
+    padding: 22px 24px 22px 48px;
+    border-radius: 20px;
+  }
+
+  .atSymbol {
+    left: 24px;
+    font-size: 1.3rem;
+  }
+
+  .ctaEnabled, .ctaDisabled {
+    font-size: 1.3rem;
+    padding: 22px 0;
+    border-radius: 32px;
+    max-width: 500px;
+  }
+
+  .progressBar {
+    max-width: 500px;
+    margin: 0 auto;
+    height: 6px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1000px;
+    padding: 60px;
+  }
+
+  .instagramWrapper {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 50px;
+  }
+
+  .instagramIcon {
+    width: 84px;
+    height: 84px;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+    max-width: 650px;
+    margin-bottom: 50px;
+  }
+
+  .inputWrapper {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+
+  .input {
+    font-size: 1.4rem;
+    padding: 24px 26px 24px 52px;
+  }
+
+  .atSymbol {
+    left: 26px;
+    font-size: 1.4rem;
+  }
+
+  .ctaEnabled, .ctaDisabled {
+    font-size: 1.4rem;
+    padding: 24px 0;
+    max-width: 600px;
+  }
+}
+@media (min-width: 1200px) {
+  .ctaEnabled, .ctaDisabled {
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+}
