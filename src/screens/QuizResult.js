@@ -82,8 +82,8 @@ export default function QuizResult({ onShowReport }) {
           </div>
           <div className={styles.resultText}>
             <strong>We Found<br />
-            52 Non-Mutual Followers —</strong><br />
-            <span className={styles.percentage}>25% Of Your Following</span>
+            7% of your following aren’t mutual.</strong><br />
+            <span className={styles.percentage}>These accounts don’t follow you back and may lower engagement.</span>
           </div>
         </div>
 
@@ -92,9 +92,9 @@ export default function QuizResult({ onShowReport }) {
             <InstagramEmoji emoji="⚠️" size={24} />
           </div>
           <div className={styles.warningText}>
-            <strong>14 Suspicious Accounts<br />
-            Detected —</strong> Recommended For<br />
-            Removal
+            <strong>4% of accounts detected may be suspicious.<br />
+            </strong>Removing them can improve your profile’s health and safety.<br />
+          
           </div>
         </div>
 

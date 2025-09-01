@@ -94,7 +94,7 @@ export default function QuizFinalReport({ username, answers, onShowPaywall }) {
               <InstagramEmoji emoji="👥" size={20} />
             </div>
             <div className={styles.noteText}>
-              <div className={styles.todayText}>Today We Detected 94 Unwanted Followers</div>
+              <div className={styles.todayText}>Today We Detected Unwanted Followers</div>
               <div className={styles.subText}>— Removing Them Can Increase Engagement By <strong>15%!</strong></div>
             </div>
           </div>

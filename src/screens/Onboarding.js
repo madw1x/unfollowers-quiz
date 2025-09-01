@@ -13,7 +13,6 @@ const getDeviceType = () => {
 
 export default function Onboarding({ onStart }) {
   useEffect(() => {
-    // Event: quiz_viewed - Пользователь зашел на первую страницу квиза
     if (window.trackEvent) {
       window.trackEvent('quiz_viewed', {
         referrer: document.referrer || 'direct',
@@ -24,7 +23,6 @@ export default function Onboarding({ onStart }) {
   }, []);
 
   const handleStart = () => {
-    // Event: quiz_started - Нажата кнопка стартовки квиза
     if (window.trackEvent) {
       window.trackEvent('quiz_started', {
         step_index: 0,
@@ -37,7 +35,6 @@ export default function Onboarding({ onStart }) {
 
   return (
     <div className={styles.wrapper}>
-   
       <div className={styles.mainContent}>
         <header className={styles.header}>
           <h2 className={styles.title}>
@@ -65,16 +62,14 @@ export default function Onboarding({ onStart }) {
         </div>
 
         <div className={styles.steps}>
-          You're <b>0</b> steps away from a cleaner,<br/>healthier profile
+          Ready to unlock a cleaner, more productive Instagram?
         </div>
 
-      
         <button className={`${styles.cta} ${styles.ctaMobile}`} onClick={handleStart}>
           Start the quiz
         </button>
       </div>
 
-     
       <div className={styles.stickyFooter}>
         <button className={styles.ctaDesktop} onClick={handleStart}>
           Start the quiz

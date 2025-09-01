@@ -33,7 +33,7 @@ export default function QuizStep8({ onContinue }) {
       <div className={styles.header}>
         <h2 className={styles.title}>
           Average User Removes<br />
-          37 Followers In Cleanup — Ready<br />
+          9% of Followers In Cleanup — Ready<br />
           To Beat The Record?
         </h2>
       </div>
@@ -70,7 +70,7 @@ export default function QuizStep8({ onContinue }) {
               <InstagramEmoji emoji="🤖" size={24} />
             </div>
             <div className={styles.statTitle}>
-              <strong>X Bots Identified —</strong> Removing<br />
+              <strong>7,4% Bots Identified —</strong> Removing<br />
               Them Improves Profile Quality
             </div>
           </div>
